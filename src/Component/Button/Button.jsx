@@ -3,7 +3,7 @@ import "./Button.css";
 const Button = (props) => {
   return (
     <button className="main-btn">
-      <a href="">
+      <a href="/#">
         {props.name} {props.icon}
       </a>
     </button>

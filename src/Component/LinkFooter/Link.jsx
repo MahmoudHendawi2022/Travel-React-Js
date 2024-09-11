@@ -1,9 +1,9 @@
-import React, { Children } from "react";
+
 import { MdNavigateNext } from "react-icons/md";
 const LinkNav = (props) => {
   return (
     <li>
-      <a href="">
+      <a href="/#">
         <MdNavigateNext />
         <span>{props.name}</span>
       </a>

@@ -33,7 +33,7 @@ const Footer = () => {
           </div>
           <div className="ftr">
             <button className="main-btn">
-              <a href="">
+              <a href="/#">
                 send <IoIosSend />
               </a>
             </button>
@@ -49,22 +49,22 @@ const Footer = () => {
             </p>
             <ul className="media">
               <li>
-                <a href="">
+                <a href="/#">
                   <FaTwitter />
                 </a>
               </li>
               <li>
-                <a href="">
+                <a href="/#">
                   <FaYoutube />{" "}
                 </a>
               </li>
               <li>
-                <a href="">
+                <a href="/#">
                   <RiInstagramFill />
                 </a>
               </li>
               <li>
-                <a href="">
+                <a href="/#">
                   <FaTripadvisor />
                 </a>
               </li>
