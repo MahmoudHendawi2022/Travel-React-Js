@@ -1,0 +1,123 @@
+:root {
+  --primaryColor: hsl(199, 100%, 33%);
+  --secondaryColor: hsl(199, 100%, 33%);
+  --gradientColor: linear-gradient(
+    to right,
+    hsl(187, 85%, 43%),
+    hsl(199, 100%, 33%)
+  );
+  --whiteColor: hsl(0, 0%, 100%);
+  --blackColor: hsl(201, 33%, 16%);
+  --textColor: hsl(240, 4%, 36%);
+  --whiteColorDeam: hsl(0, 0%, 93%);
+  --greyText: rgb(190, 190, 190);
+  --inputColor: rgb(239, 239, 239);
+  --bodyColor: rgb(240, 240, 246);
+  --cardBg: rgb(225, 225, 235);
+}
+
+.navBar {
+  background-color: var(--whiteColor);
+}
+.navBar .container {
+  padding: 20px 0;
+  justify-content: space-between;
+}
+.navBar .container .menu-icon {
+  font-size: 25px;
+  display: none;
+}
+.navBar .container ul {
+  gap: 25px;
+}
+.navBar .container ul button {
+  padding: 5px 20px;
+  background: var(--gradientColor);
+  border-radius: 25px;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  -ms-border-radius: 25px;
+  -o-border-radius: 25px;
+  outline: none;
+  border: none;
+}
+.navBar .container ul button a {
+  color: var(--whiteColor);
+  font-size: 15px;
+}
+.navBar .container ul li a {
+  transition: 0.4s ease;
+  -webkit-transition: 0.4s ease;
+  -moz-transition: 0.4s ease;
+  -ms-transition: 0.4s ease;
+  -o-transition: 0.4s ease;
+  color: #000;
+}
+.navBar .container ul li a:hover {
+  color: var(--secondaryColor);
+}
+.navBar .container ul .close-icon {
+  font-size: 25px;
+  display: none;
+}
+
+@media (max-width: 500px) {
+  .navbar .container ul {
+    width: 100% !important;
+  }
+}
+@media (max-width: 767px) {
+  .container {
+    width: 90%;
+  }
+  .menu-icon,
+  .close-icon {
+    display: block !important;
+    cursor: pointer;
+    color: var(--secondaryColor);
+  }
+  .navBar .container {
+    position: relative;
+  }
+  .navBar .container ul {
+    position: absolute;
+    top: -500px;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    z-index: 5000;
+    background-color: var(--whiteColor);
+    width: 300px;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    padding: 20px 0;
+    transition: 0.3s ease-in-out;
+    -webkit-transition: 0.3s ease-in-out;
+    -moz-transition: 0.3s ease-in-out;
+    -ms-transition: 0.3s ease-in-out;
+    -o-transition: 0.3s ease-in-out;
+  }
+  .navBar .container ul.activeNavber {
+    top: 100px;
+  }
+}
+@media (max-width: 992px) {
+  .navBar .container ul {
+    gap: 18px;
+  }
+  .navBar .container ul a {
+    font-size: 14px;
+  }
+  .navBar .container ul button {
+    margin-left: 20px;
+    padding: 5px 10px;
+  }
+  .navBar .container ul button a {
+    font-size: 12px;
+  }
+}/*# sourceMappingURL=navbar.css.map */

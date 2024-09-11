@@ -1,0 +1,192 @@
+:root {
+  --primaryColor: hsl(199, 100%, 33%);
+  --secondaryColor: hsl(199, 100%, 33%);
+  --gradientColor: linear-gradient(
+    to right,
+    hsl(187, 85%, 43%),
+    hsl(199, 100%, 33%)
+  );
+  --whiteColor: hsl(0, 0%, 100%);
+  --blackColor: hsl(201, 33%, 16%);
+  --textColor: hsl(240, 4%, 36%);
+  --whiteColorDeam: hsl(0, 0%, 93%);
+  --greyText: rgb(190, 190, 190);
+  --inputColor: rgb(239, 239, 239);
+  --bodyColor: rgb(240, 240, 246);
+  --cardBg: rgb(225, 225, 235);
+}
+
+.home {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 85vh;
+  margin: auto;
+}
+.home .container {
+  justify-content: center;
+  z-index: 1000;
+  height: -moz-max-content;
+  height: max-content;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.home .container .form-content {
+  position: relative;
+}
+.home .container .titles p {
+  text-transform: uppercase;
+  color: white;
+}
+.home .container .titles h2 {
+  text-transform: capitalize;
+  font-size: 25px;
+  color: white;
+}
+.home .container .cardDiv {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  background-color: var(--whiteColor);
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  padding: 30px;
+  align-items: center;
+}
+.home .container .cardDiv .inForm {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.home .container .cardDiv .inForm label {
+  color: var(--textColor);
+  text-transform: capitalize;
+  font-size: 14px;
+  width: 100%;
+}
+.home .container .cardDiv .inForm .input {
+  position: relative;
+  background-color: var(--inputColor);
+  padding: 5px 10px;
+  border-radius: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.home .container .cardDiv .inForm .input .icon {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  color: var(--textColor);
+  font-weight: bold;
+  font-size: 20px;
+}
+.home .container .cardDiv .inForm .input input {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  width: 100%;
+}
+.home .container .searchOption {
+  cursor: pointer;
+  color: var(--whiteColor);
+  padding: 5px 15px;
+  border-radius: 20px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  position: absolute;
+  z-index: 10000;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--gradientColor);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+}
+.home .container .searchOption span {
+  font-size: 15px;
+}
+.home .container .homeFooter {
+  display: flex;
+  justify-content: space-between;
+  color: var(--whiteColor);
+  margin-top: 50px;
+}
+.home .container .homeFooter .icons-left {
+  display: flex;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+}
+.home .container .homeFooter .icons-right {
+  display: flex;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+}
+.home .container .homeFooter svg {
+  cursor: pointer;
+  font-size: 20px;
+}
+.home .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 10;
+  background-color: rgb(47, 106, 127);
+  mix-blend-mode: hard-light;
+}
+.home video {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@media (max-width: 767px) {
+  .cardDiv {
+    display: flex;
+    flex-direction: column;
+  }
+  .cardDiv .inForm {
+    width: 100% !important;
+  }
+  .cardDiv .inForm input {
+    width: 100% !important;
+  }
+}
+@media (max-width: 1199px) {
+  .container {
+    width: 90% !important;
+  }
+}/*# sourceMappingURL=home.css.map */

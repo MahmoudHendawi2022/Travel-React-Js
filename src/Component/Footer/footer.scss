@@ -1,0 +1,238 @@
+@import "../root";
+@import "../Mixins/mixin";
+footer {
+  position: relative;
+  margin-top: 100px;
+  .overlay {
+    @include overlay;
+  }
+  video {
+    @include video;
+  }
+  .container {
+    padding: 50px 20px;
+    display: flex;
+    justify-content: center;
+    .foot-top {
+      z-index: 500;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      position: absolute;
+      width: 800px;
+      .fTl {
+        p {
+          color: var(--whiteColor);
+          text-transform: uppercase;
+          font-size: 12px;
+        }
+        h3 {
+          color: var(--whiteColor);
+          text-transform: capitalize;
+        }
+      }
+      .ftmail {
+        input {
+          border: none;
+          outline: none;
+          border-radius: 20px;
+          -webkit-border-radius: 20px;
+          -moz-border-radius: 20px;
+          -ms-border-radius: 20px;
+          -o-border-radius: 20px;
+          padding: 5px 10px;
+          width: 300px
+        }
+      }
+      .ftr {
+        button {
+          @include button(80px, 12px, 15px);
+        }
+      }
+    }
+    .foot-bottom {
+      overflow: hidden;
+      position: relative;
+      margin-top: 80px;
+      z-index: 500;
+      display: flex;
+      justify-content: space-between;
+      
+      background-color: var(--whiteColor);
+      padding: 20px 20px 50px;
+      border-radius: 20px;
+      -webkit-border-radius: 20px;
+      -moz-border-radius: 20px;
+      -ms-border-radius: 20px;
+      -o-border-radius: 20px;
+      .travel-info {
+        flex-basis: 40%;
+        p {
+          margin-top: 15px;
+          font-size: 12px;
+          color: var(--textColor);
+        }
+        ul.media {
+          margin-top: 15px;
+          display: flex;
+          gap: 10px;
+          align-items: center;
+          flex-direction: row;
+          justify-content: flex-start;
+          svg {
+            font-size: 16px;
+            color: var(--textColor);
+            transition: 0.4s ease;
+            -webkit-transition: 0.4s ease;
+            -moz-transition: 0.4s ease;
+            -ms-transition: 0.4s ease;
+            -o-transition: 0.4s ease;
+            &:hover {
+              color: var(--primaryColor);
+            }
+          }
+        }
+      }
+      .navLinksFooter {
+        flex-basis: 55%;
+        display: flex;
+        gap: 30px;
+        justify-content: space-around;
+      }
+      ul {
+       
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        justify-content: space-between;
+        h5 {
+          text-transform: uppercase;
+          font-weight: 600;
+        }
+        li {
+          text-transform: capitalize;
+          a {
+            color: var(--textColor);
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            span {
+              transition: 0.4s ease;
+              -webkit-transition: 0.4s ease;
+              -moz-transition: 0.4s ease;
+              -ms-transition: 0.4s ease;
+              -o-transition: 0.4s ease;
+            }
+            span:hover {
+              transform: translateX(8px);
+              color: var(--primaryColor);
+              -webkit-transform: translateX(8px);
+              -moz-transform: translateX(8px);
+              -ms-transform: translateX(8px);
+              -o-transform: translateX(8px);
+}
+          }
+        }
+      }
+      .copyRight {
+        padding: 7px 20px;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        background: var(--gradientColor);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 600;
+        color: var(--whiteColor);
+        .copy {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
+// //////////////////////////////////////////////
+@media (max-width:992px) {
+  .container {
+    width: 90% !important;
+  }
+  .foot-bottom {
+    display: flex !important;
+    flex-direction: column;
+    gap: 30px;
+    .travel-info {
+      flex-basis: 100%;
+    }
+    .navLinksFooter {
+      margin-bottom: 40px;
+      ul {
+      }
+    }
+    
+    .copyRight {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  
+}
+
+@media (max-width:600px) {
+  .container {
+    width: 90% !important;
+  }
+  .copyRight {
+    .copy {
+      font-size: 12px !important;
+    }
+  }
+}
+
+@media (max-width:767px) {
+  .foot-top {
+    width: 100% !important;
+    display: flex;
+    flex-direction: column;
+    
+    .ftmail {
+      margin: auto !important;
+    }
+    .ftr {
+      button{
+        width: 250px !important;
+        a{
+          font-size: 14px !important;
+          
+        }
+      }
+    }
+  }
+
+  .foot-bottom {
+    margin-top: 200px !important;
+  }
+}
+
+@media (max-width:500px) {
+  .navLinksFooter {
+    
+    display: flex;
+    flex-wrap: wrap !important;
+    justify-content: space-between !important;
+    ul {
+      width: 40% !important;
+      
+    }
+  }
+  .copyRight {
+    .copy{
+
+      font-size: 10px !important;
+    }
+  }
+}

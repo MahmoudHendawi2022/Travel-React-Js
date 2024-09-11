@@ -1,0 +1,119 @@
+@import "../root";
+
+.navBar {
+  background-color: var(--whiteColor);
+  .container {
+    padding: 20px 0;
+    justify-content: space-between;
+    .menu-icon {
+      font-size: 25px;
+      display: none;
+    }
+    ul {
+      gap: 25px;
+      button {
+        padding: 5px 20px;
+        background: var(--gradientColor);
+        border-radius: 25px;
+        -webkit-border-radius: 25px;
+        -moz-border-radius: 25px;
+        -ms-border-radius: 25px;
+        -o-border-radius: 25px;
+        outline: none;
+        border: none;
+        a {
+          color: var(--whiteColor);
+          font-size: 15px;
+        }
+      }
+      li {
+        a {
+          transition: 0.4s ease;
+          -webkit-transition: 0.4s ease;
+          -moz-transition: 0.4s ease;
+          -ms-transition: 0.4s ease;
+          -o-transition: 0.4s ease;
+          color: #000;
+          &:hover {
+            color: var(--secondaryColor);
+          }
+        }
+      }
+      .close-icon {
+        font-size: 25px;
+        display: none;
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .navbar {
+    .container {
+      ul {
+        width: 100% !important;
+      }
+    }
+  }
+}
+@media (max-width: 767px) {
+  .container {
+    width: 90%;
+  }
+  .menu-icon,
+  .close-icon {
+    display: block !important;
+    cursor: pointer;
+    color: var(--secondaryColor);
+  }
+  .navBar {
+    .container {
+      position: relative;
+      ul {
+        position: absolute;
+        top: -500px;
+        right: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        z-index: 5000;
+        background-color: var(--whiteColor);
+        width: 300px;
+        border-radius: 20px;
+        -webkit-border-radius: 20px;
+        -moz-border-radius: 20px;
+        -ms-border-radius: 20px;
+        -o-border-radius: 20px;
+        padding: 20px 0;
+        transition: 0.3s ease-in-out;
+        -webkit-transition: 0.3s ease-in-out;
+        -moz-transition: 0.3s ease-in-out;
+        -ms-transition: 0.3s ease-in-out;
+        -o-transition: 0.3s ease-in-out;
+        &.activeNavber {
+          top: 100px;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 992px) {
+  .navBar {
+    .container {
+      ul {
+        gap: 18px;
+        a {
+          font-size: 14px;
+        }
+        button {
+          margin-left: 20px;
+          padding: 5px 10px;
+          a {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+}

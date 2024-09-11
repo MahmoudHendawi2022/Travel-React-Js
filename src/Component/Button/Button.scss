@@ -1,0 +1,6 @@
+@import "../root";
+@import '../Mixins/mixin';
+button.main-btn {
+  @include button(120px , 12px);
+  
+}

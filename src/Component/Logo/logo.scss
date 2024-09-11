@@ -1,0 +1,11 @@
+@import "../root";
+.logo a {
+  font-size: 20px;
+  color: #000;
+  gap: 5px;
+  font-weight: 700;
+  .icon {
+    font-size: 25px;
+    color: var(--secondaryColor);
+  }
+}
